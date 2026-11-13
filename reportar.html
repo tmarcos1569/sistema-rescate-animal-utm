@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de ingreso y reporte de nuevos animales rescatados.">
+    <title>Reportar Rescate | Sistema de Control de Rescate y Adopción</title>
+</head>
+<body>
+    <header>
+        <img src="assets/img/logo.png" alt="Logotipo del Refugio de Rescate y Adopción" width="80" height="80">
+        <h1>Sistema de Control de Rescate y Adopción</h1>
+        <p>Unidad de Bienestar Animal y Protección de Fauna</p>
+        <nav aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html">Inicio (Dashboard)</a></li>
+                <li><a href="reportar.html" aria-current="page">Reportar Rescate</a></li>
+                <li><a href="rescates.html">Casos Registrados</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section aria-labelledby="registro-titulo">
+            <h2 id="registro-titulo">Formulario de Ingreso de Nuevo Animal Rescatado</h2>
+            <p>Complete todos los campos obligatorios (<abbr title="obligatorio">*</abbr>) para registrar el expediente clínico inicial.</p>
+
+            <article>
+                <h3>Ficha de Recepción</h3>
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Identificación del Caso</legend>
+
+                        <div>
+                            <label for="titulo-caso">Título del caso <abbr title="obligatorio">*</abbr>:</label>
+                            <input type="text" id="titulo-caso" name="titulo_caso" required minlength="5" maxlength="100" placeholder="Ej. Rescate en sector parque central">
+                        </div>
+
+                        <div>
+                            <label for="nombre-provisional">Nombre provisional del ejemplar <abbr title="obligatorio">*</abbr>:</label>
+                            <input type="text" id="nombre-provisional" name="nombre_provisional" required minlength="2" maxlength="50" placeholder="Ej. Canela">
+                        </div>
+
+                        <div>
+                            <label for="categoria">Categoría de especie <abbr title="obligatorio">*</abbr>:</label>
+                            <select id="categoria" name="categoria" required>
+                                <option value="">-- Seleccione una categoría --</option>
+                                <option value="perros">Perros</option>
+                                <option value="gatos">Gatos</option>
+                                <option value="fauna_silvestre">Fauna Silvestre</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Nivel de Urgencia Médica <abbr title="obligatorio">*</abbr></legend>
+
+                        <div>
+                            <input type="radio" id="urgencia-alta" name="urgencia_medica" value="alta" required>
+                            <label for="urgencia-alta">Alta (Riesgo vital, heridas graves o trauma)</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="urgencia-media" name="urgencia_medica" value="media">
+                            <label for="urgencia-media">Media (Desnutrición, lesiones leves o infección controlada)</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="urgencia-baja" name="urgencia_medica" value="baja">
+                            <label for="urgencia-baja">Baja (Chequeo preventivo, extravío o abandono sin lesiones)</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Evaluación Inicial</legend>
+
+                        <div>
+                            <label for="descripcion-estado">Descripción detallada del estado en que se encontró <abbr title="obligatorio">*</abbr>:</label><br>
+                            <textarea id="descripcion-estado" name="descripcion_estado" rows="5" cols="50" required minlength="15" placeholder="Detalle condiciones físicas, movilidad, lugar exacto del hallazgo y signos visibles..."></textarea>
+                        </div>
+                    </fieldset>
+
+                    <div>
+                        <button type="submit">Registrar Rescate</button>
+                        <button type="reset">Limpiar Campos</button>
+                    </div>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>Contacto del Refugio:</strong> Av. Universitaria y Calle Principal | Teléfono: <a href="tel:+59352632673">(05) 263-2673</a> | Correo: <a href="mailto:contacto@refugiorescate.org">contacto@refugiorescate.org</a></p>
+        <p>&copy; 2026 Sistema de Control de Rescate y Adopción - Desarrollo de Sistemas Informáticos. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>Z
